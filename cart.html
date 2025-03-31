@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="Main.css">
+    <link rel="stylesheet" href="Cart.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./Photo/Mibi.png" alt="Mibi">
+            MiniBeads
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="cart-icon">
+            <a href="cart.html">
+                <img src="./Photo/cart.png" class="cart-img" alt="Cart">
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="cart-container">
+        <h1>Your Food Order</h1>
+        
+        <div class="cart-wrapper">
+            <section class="cart-items">
+                <h2>Selected Items</h2>
+                <div class="items-list">
+                </div>
+                <div class="cart-total">
+                    <p>Subtotal: <span id="subtotal">Rp-</span></p>
+                    <p>Delivery Fee: <span id="delivery-fee">Rp12.000,-</span></p>
+                    <p class="total">Total: <span id="total">Rp12.000,-</span></p>
+                </div>
+            </section>
+
+            <section class="checkout-form">
+                <h2>Delivery Information</h2>
+                <form id="order-form">
+                    <div class="form-group">
+                        <label for="name">Full Name*</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number*</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Delivery Address*</label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notes">Special Instructions</label>
+                        <textarea id="notes" name="notes" rows="2" placeholder="Any allergies or special requests?"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Payment Method</label>
+                        <div class="payment-options">
+                            <select>
+                                <option>Cash on Delivery(COD)</option>
+                                <option>Transfer</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-order">Place Order</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="footer-heading">MiniBead</h3>
+                <p class="footer-text">Minibeads itu usaha gua di bidang manik manik, kalo tertarik langsung chat WA aja.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">Home</a></li>
+                    <li><a href="index.html#products" class="footer-link">Menu</a></li>
+                    <li><a href="index.html#about" class="footer-link">About</a></li>
+                    <li><a href="index.html#contact" class="footer-link">Contact</a></li>
+                    <li><a href="cart.html" class="footer-link">View Cart</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-heading">Connect With Us</h3>
+                <div class="social-media-icons">
+                    <a href="#" class="social-icon" title="WhatsApp">
+                        <img src="./Photo/whatsapp.png" alt="WhatsApp">
+                    </a>
+                    <a href="#" class="social-icon" title="TikTok">
+                        <img src="./Photo/tiktok.png" alt="TikTok">
+                    </a>
+                    <a href="#" class="social-icon" title="Instagram">
+                        <img src="./Photo/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-icon" title="Email">
+                        <img src="./Photo/email.png" alt="Email">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-heading">Contact Us</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span>Medan, Indonesia</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span>+62-819-9388-0998</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <span>GuaGabut@yahoo.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 Victor P.Y. All rights reserved.</p>
+        </div>
+    </footer>
+
+<script src="Main.js"></script>
+<script src="Cart.js"></script>
+</body>
+</html>
