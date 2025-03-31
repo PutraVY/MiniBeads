@@ -28,39 +28,29 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
+    padding: 0.8rem 5%;
     background: linear-gradient(135deg, #3d93b4 0%, #a33a9e 100%);
+    color: white;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 60px;
 }
 
-/* Logo section */
-.logo-container {
+.logo {
     display: flex;
     align-items: center;
-    min-width: 120px;
-}
-
-.logo-img {
-    height: 40px;
-    margin-right: 10px;
-}
-
-.logo-text {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    color: white;
+    white-space: nowrap;
+    height: 100%;
 }
 
-/* Navigation container */
-.nav-container {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    justify-content: flex-end;
+.logo img {
+    height: 36px;
+    margin-right: 10px;
 }
 
 .nav-links {
@@ -69,6 +59,7 @@ section {
     margin: 0;
     padding: 0;
     gap: 1.5rem;
+    align-items: center;
 }
 
 .nav-links a {
@@ -77,27 +68,28 @@ section {
     font-weight: 500;
     transition: color 0.3s;
     font-size: 1rem;
+    padding: 0.5rem 0;
 }
 
 .nav-links a:hover {
     color: #ffcc00;
 }
 
-/* Cart section */
-.cart-container {
-    margin-left: 2rem;
+.cart-icon {
     position: relative;
+    margin-left: 1rem;
 }
 
 .cart-img {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
 }
 
 .cart-count {
     position: absolute;
-    top: -10px;
-    right: -10px;
+    top: -8px;
+    right: -8px;
     background: #ffcc00;
     color: #333;
     border-radius: 50%;
@@ -106,94 +98,93 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: bold;
 }
 
 /* ===== MOBILE RESPONSIVENESS ===== */
+@media (max-width: 992px) {
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
-        padding: 0.8rem 4%;
-        flex-wrap: wrap;
+        padding: 0.7rem 4%;
+        height: 56px;
     }
     
-    .logo-img {
-        height: 35px;
-        margin-right: 8px;
-    }
-    
-    .logo-text {
+    .logo {
         font-size: 1.3rem;
     }
     
-    .nav-container {
-        order: 2;
-        width: 100%;
-        justify-content: space-between;
-        margin-top: 0.5rem;
+    .logo img {
+        height: 32px;
+        margin-right: 8px;
     }
     
     .nav-links {
-        gap: 1rem;
+        gap: 0.8rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+    
+    .cart-img {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 0.6rem 3%;
+        height: 52px;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .logo img {
+        height: 30px;
+        margin-right: 6px;
+    }
+    
+    .nav-links {
+        gap: 0.6rem;
     }
     
     .nav-links a {
         font-size: 0.9rem;
     }
     
-    .cart-container {
-        margin-left: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar {
-        padding: 0.6rem 3%;
-    }
-    
-    .logo-img {
-        height: 30px;
-        margin-right: 6px;
-    }
-    
-    .logo-text {
-        font-size: 1.1rem;
-    }
-    
-    .nav-links {
-        gap: 0.7rem;
-    }
-    
-    .nav-links a {
-        font-size: 0.85rem;
-    }
-    
-    .cart-img {
-        width: 28px;
-        height: 28px;
-    }
-    
     .cart-count {
         width: 18px;
         height: 18px;
         font-size: 0.7rem;
-        top: -8px;
-        right: -8px;
+        top: -6px;
+        right: -6px;
     }
 }
 
-/* For very small devices */
-@media (max-width: 360px) {
-    .logo-text {
+@media (max-width: 400px) {
+    .logo span {
         display: none;
     }
     
+    .logo img {
+        margin-right: 0;
+    }
+    
     .nav-links {
-        gap: 0.5rem;
+        gap: 0.4rem;
     }
     
     .nav-links a {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
 }
 
