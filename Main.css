@@ -23,7 +23,6 @@ section {
     z-index: 1;
 }
 
-/* Navbar Base Styles */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -55,7 +54,7 @@ section {
     display: flex;
     list-style: none;
     gap: 1.5rem;
-    margin: 0 1rem;
+    margin: 0 auto;
 }
 
 .nav-links a {
@@ -64,7 +63,6 @@ section {
     font-weight: 500;
     transition: color 0.3s;
     padding: 0.5rem 0;
-    display: block;
 }
 
 .nav-links a:hover {
@@ -73,13 +71,12 @@ section {
 
 .cart-icon {
     position: relative;
-    margin-left: 1rem;
+    margin-left: auto; /* Pushes cart to far right */
 }
 
 .cart-img {
     width: 30px;
     height: 30px;
-    vertical-align: middle;
 }
 
 .cart-count {
@@ -98,38 +95,31 @@ section {
     font-weight: bold;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-    .nav-links {
-        gap: 1rem;
-    }
-}
-
+/* Mobile-First Adjustments */
 @media (max-width: 768px) {
     .navbar {
         padding: 0.8rem 5%;
+        flex-wrap: nowrap; /* Prevent items from wrapping */
     }
     
     .logo {
         font-size: 1.3rem;
+        margin-right: 10px; /* Reduced space after logo */
     }
     
     .logo img {
-        height: 35px;
+        height: 32px;
         margin-right: 8px;
     }
     
     .nav-links {
         gap: 0.8rem;
+        margin: 0 10px 0 auto; /* Pushes nav to left, cart to right */
+        padding: 0;
     }
     
-    .nav-links a {
-        font-size: 0.95rem;
-    }
-    
-    .cart-img {
-        width: 28px;
-        height: 28px;
+    .cart-icon {
+        margin-left: 10px; /* Space between nav and cart */
     }
 }
 
@@ -140,16 +130,17 @@ section {
     
     .logo {
         font-size: 1.1rem;
+        margin-right: 5px;
     }
     
     .logo img {
-        height: 30px;
-        margin-right: 6px;
+        height: 28px;
+        margin-right: 5px;
     }
     
     .nav-links {
-        gap: 0.5rem;
-        margin: 0 0.5rem;
+        gap: 0.6rem;
+        margin: 0 5px 0 auto;
     }
     
     .nav-links a {
@@ -160,20 +151,12 @@ section {
         width: 26px;
         height: 26px;
     }
-    
-    .cart-count {
-        width: 18px;
-        height: 18px;
-        font-size: 0.7rem;
-        top: -8px;
-        right: -8px;
-    }
 }
 
-/* For very small devices (optional) */
+/* For very small phones */
 @media (max-width: 400px) {
     .logo span {
-        display: none; /* Hide text, keep only logo */
+        display: none; /* Hide text on smallest screens */
     }
     
     .logo img {
@@ -186,13 +169,12 @@ section {
     
     .nav-links a {
         font-size: 0.8rem;
+        padding: 0.3rem 0;
     }
-}
-
-.cart-img {
-    vertical-align: middle;
-    height: 25px;
-    width: 25px;
+    
+    .cart-icon {
+        margin-left: 5px;
+    }
 }
 
 html, body {
